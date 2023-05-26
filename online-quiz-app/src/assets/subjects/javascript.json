@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Which HTML tag do we use to put the JavaScript?",
+        "options": [
+            "<javascript>",
+            "<script>",
+            "<js>",
+            "None of the above"
+        ],
+        "answer": "<script>",
+        "selectedOption": ""
+    },
+    {
+        "name": " Which built-in method calls a function for each element in the array?",
+        "options": [
+            "while()",
+            "loop",
+            "forEach",
+            "takeUntil"
+        ],
+        "answer": "forEach",
+        "selectedOption": ""
+    },
+    {
+        "name": "What is the difference between let and var?",
+        "options": [
+            "let has local scope",
+            "Both are same",
+            "var is new data type",
+            "let consumes more cpu and ram"
+        ],
+        "answer": "let has local scope",
+        "selectedOption": ""
+    },
+    {
+        "name": "What is TypeScript?",
+        "options": [
+            "A Language based on Javascript",
+            "script that runs on browser",
+            "A DataType Collection of Javascript",
+            "None of the above"
+        ],
+        "answer": "A Language based on Javascript",
+        "selectedOption": ""
+    },
+    {
+        "name": "Which of the following is right syntex for arrow function?",
+        "options": [
+            "a -> { return b; }",
+            "x <= x + y;",
+            "x <- x + 5;",
+            "x => x + 5;"
+        ],
+        "answer": "x => x + 5;",
+        "selectedOption": ""
+    },
+    {
+        "name": "Which ES6 feature helps in merging of a number of changed properties into an existing object?",
+        "options": [
+            "Class syntax",
+            "Object.assign()",
+            "map data structure",
+            "Array.includes(obj);"
+        ],
+        "answer": "Object.assign()",
+        "selectedOption": ""
+    },
+    {
+        "name": "Which new ES6 syntax helps with formatting output text - mixing variables with string literals.",
+        "options": [
+            "Generator Functions",
+            "Arrow Functions",
+            "Template Strings",
+            "Set Data Structure"
+        ],
+        "answer": "Template Strings",
+        "selectedOption": ""
+    },
+    {
+        "name": "What is the difference between == and === ?",
+        "options": [
+            "=== throws syntax error",
+            "== checks values only, === checks types as well",
+            "=== is reference type check only",
+            "Both are same"
+        ],
+        "answer": "== checks values only, === checks types as well",
+        "selectedOption": ""
+    },
+    {
+        "name": "Which of the following is NOT the method of an Array?",
+        "options": [
+            ".map()",
+            ".includes()",
+            ".subscribe()",
+            ".flatMap()"
+        ],
+        "answer": ".subscribe()",
+        "selectedOption": ""
+    },
+    {
+        "name": "What will be the output of the following code: ['a', 'b', 'c'].fill(7, 1, 2);?",
+        "options": [
+            "['a', 7, 'c']",
+            "['a', 7, 7, 'b', 'c']",
+            "['a', 'b', 'c']",
+            "['7', 7, 'c']"
+        ],
+        "answer": "['a', 7, 'c']",
+        "selectedOption": ""
+    }
+]

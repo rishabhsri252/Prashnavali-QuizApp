@@ -1,0 +1,34 @@
+.options {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+
+.option {
+    margin: 2px;
+}
+
+.correct {
+    background-color: lightgreen;
+    padding: 4px;
+}
+
+.incorrect {
+    background-color: lightcoral;
+    padding: 4px;
+}
+
+.unattempted {
+    background-color: lightgray;
+    padding: 4px;
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-board {
+    min-width: 50vw;
+}

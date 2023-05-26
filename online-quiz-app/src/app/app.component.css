@@ -1,0 +1,10 @@
+mat-card {
+    display:grid;
+    min-height:100%;
+}
+
+mat-card-content {
+    display: flex;
+    justify-content: center;
+    min-height:70%;
+}

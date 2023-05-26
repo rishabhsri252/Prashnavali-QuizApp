@@ -1,0 +1,21 @@
+<div *ngIf="attemptedQuestions" class="result-board">
+    <h1>Quiz Result</h1>
+    <hr>
+    <h2>Score : {{scoreObtained}} / {{attemptedQuestions.length}} <button mat-raised-button color="primary" (click)="restartQuiz()">Restart</button>
+    </h2>
+
+    <div class="container" *ngFor="let question of attemptedQuestions; let i = index">
+        <h2>{{i+1}}). {{question.name}}</h2>
+        <mat-radio-group class="options" [disabled]="true" [(ngModel)]="question.selectedOption">
+            <mat-radio-button color="primary" class="option" *ngFor="let option of question['options']"
+                [value]="option">
+                {{option}}
+            </mat-radio-button>
+        </mat-radio-group>
+        <div [class]="question.status">Your answer is {{question.status}}</div>
+        <br>
+        <div class="answer" *ngIf="question.status !== 'correct'">Correct answer is "{{question.answer}}"</div>
+        <hr>
+    </div>
+    <button mat-raised-button color="primary" (click)="restartQuiz()">Restart</button>
+</div>

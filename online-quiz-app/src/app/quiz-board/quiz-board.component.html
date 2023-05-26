@@ -1,0 +1,62 @@
+<div class="container">
+    <!--
+    Quiz Board
+-->
+    <div class="quiz-board">
+        <h1>Quiz Board - {{selectedSubject | titlecase }}</h1>
+        <hr>
+        Time left : {{countTimer}} seconds
+        <hr>
+        <div class="question-container" *ngIf="showQuizBoard">
+            <h2>{{questions[pageIndex].name}}</h2>
+           
+            <mat-radio-group [(ngModel)]="questions[pageIndex].selectedOption" class="options">
+                <mat-radio-button color="primary" class="option" 
+                    *ngFor="let option of questions[pageIndex].options"
+                    [value]="option">
+                    {{option}}
+                </mat-radio-button>
+            </mat-radio-group>
+
+            <!--
+    Paginator
+-->
+            <mat-paginator #paginator class="paginator" (page)="handlePageEvent($event)" [length]="length"
+                [pageSize]="pageSize" [disabled]="disabled" [showFirstLastButtons]="showFirstLastButtons"
+                [hidePageSize]="!hidePageSize" [pageIndex]="pageIndex" aria-label="Select page">
+            </mat-paginator>
+        </div>
+    </div>
+
+    <!--
+    Review Board
+-->
+    <div class="review-board" *ngIf="showReviewBoard">
+        <mat-button-toggle-group [value]="pageIndex" class="review-toggle">
+            <mat-button-toggle *ngFor="let question of questions; let i = index"
+                [class]="question.selectedOption?'attempted':'unattempted'" 
+                [value]="i" (click)="toggleQuestion(i)">
+                {{i+1}}
+                <br>
+                {{question.selectedOption?'attempted':'unattempted'}}
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+
+
+    </div>
+
+    <!--
+    Navigation buttons
+-->
+    <mat-button-toggle-group [(value)]="toggleState">
+        <mat-button-toggle value="quiz-board" (click)="toggleQuizBoard()">
+            <mat-icon>home</mat-icon>Quiz Board
+        </mat-button-toggle>
+        <mat-button-toggle value="review" (click)="toggleReviewBoard()">
+            <mat-icon>menu</mat-icon>Review
+        </mat-button-toggle>
+        <mat-button-toggle value="result" (click)="submitQuiz()" id="submit-button">
+            <mat-icon>open_in_new</mat-icon>Submit
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
